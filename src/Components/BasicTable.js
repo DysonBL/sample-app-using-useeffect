@@ -22,8 +22,8 @@ const BasicTable = (props) => {
   console.log('table row', props.data)
   return (
     <div>
-      <input value={searchName} onChange={handleChange} placeholder="Search Library"
-        />
+      <input value={searchName} onChange={handleChange} placeholder="Search Library"/>
+        
       <h2>Books Data Library</h2>
       <div className="App">
         <table>
