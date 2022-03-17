@@ -40,6 +40,12 @@ const Register = () => {
             password:Cpsw,
         }
         console.log(obj)
+
+        // window.sessionStorage.setItem("firstname","Fname");
+        // window.sessionStorage.getItem("firstname");
+
+        window.sessionStorage.setItem('data',JSON.stringify(obj));
+        window.sessionStorage.getItem('data')
     
         localStorage.setItem('data',JSON.stringify(obj));
         const data= JSON.parse(localStorage.getItem('data'));
@@ -47,10 +53,6 @@ const Register = () => {
         console.log([Fname, Sname, Email, Npsw, Cpsw])
 
 
-        window.sessionStorage.setItem("firstname","Henry");
-        window.sessionStorage.getItem("firstname");
-        window.sessionStorage.setItem("secondname","Dyson");
-        window.sessionStorage.getItem("secondname")
     }
     // localStorage.getItem("data");
     //  localStorage.clear();

@@ -14,8 +14,8 @@ return (
         {/* <h1>Basic Table</h1> */}
         {/* {row &&<BasicTable data={row}/>} */}
         
-        {/* <Register/>    */}
-        <Functionlife/>
+        <Register/>   
+        {/* <Functionlife/> */}
     </div>
 )
 }
