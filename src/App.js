@@ -14,7 +14,6 @@ return (
         {/* {row &&<BasicTable data={row}/>} */}
         {/* <Screen/> */}
          <Register/>
-         <Register/>
        
          
     </div>
