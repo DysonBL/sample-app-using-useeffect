@@ -1,6 +1,7 @@
 import React from "react";
 import Register from './componentslogin/Register';
 import Screen from './componentslogin/Screen';
+import Functionlife from './ComponentLifecycle/Functionlife'
 
 const App = () => {
     // const[row,setData]=useState([])
@@ -12,11 +13,9 @@ return (
     <div>
         {/* <h1>Basic Table</h1> */}
         {/* {row &&<BasicTable data={row}/>} */}
-        {/* <Screen/> */}
-         <Register/>
-         
-       
-         
+        
+        {/* <Register/>    */}
+        <Functionlife/>
     </div>
 )
 }

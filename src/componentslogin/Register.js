@@ -1,12 +1,11 @@
 import { TextField, FormControlLabel, Checkbox, Button, Grid } from "@mui/material";
 import Box from '@mui/material/Box';
-import { blueGrey } from "@mui/material/colors";
 import React, { useState } from "react";
 import Screen from "./Screen";
 
 
 const Register = () => {
-    console.log('register')
+    console.log('register form')
 
     const [Fname, setFname] = useState('')
     const [Sname, setSname] = useState('')
@@ -34,20 +33,26 @@ const Register = () => {
         setCpsw(e.target.value)
     }
     const handleSubmit = () => {
+        const obj = {
+            firstname:Fname,
+            secondname:Sname,
+            mailid:Email,
+            password:Cpsw,
+        }
+        console.log(obj)
+    
+        localStorage.setItem('data',JSON.stringify(obj));
+        const data= JSON.parse(localStorage.getItem('data'));
         setShowReg(false)
         console.log([Fname, Sname, Email, Npsw, Cpsw])
-    }
 
-    const obj = {
-        firstname:Fname,
-        secondname:Sname,
-        maill:Email,
-        password:Cpsw,
-    }
-    console.log(obj)
 
-    localStorage.setItem("data",JSON.stringify(obj));
-    // localStorage.getItem("");
+        window.sessionStorage.setItem("firstname","Henry");
+        window.sessionStorage.getItem("firstname");
+        window.sessionStorage.setItem("secondname","Dyson");
+        window.sessionStorage.getItem("secondname")
+    }
+    // localStorage.getItem("data");
     //  localStorage.clear();
 
     return (

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import { Message } from "@mui/icons-material";
+
 
 
 
@@ -11,23 +13,21 @@ const Screen = () => {
         const [password, setpassword] = useState('')
         const handleChange = (e) => {
                 e.preventDefault();
-                let data = localStorage.getItem("data");
+                let data= localStorage.getItem("data");
                 let newData = JSON.parse(data);
-                console.log(newData)
-
-                if (email === newData.Email && password === newData.password) {
-                        console.log('succsess')
-
+                console.log(newData.firstname)
+                console.log(newData.secondname)
+                console.log(newData.mailid)
+                console.log(newData.password)
+                if (email=== newData.mailid && password=== newData.password) {
+                      console.log('sucsses')
+                      alert("your login succes..Enjoy your Browser")
                 }
-                else if (email === newData.Email && password === '') {
-                        console.log('fillpassword')
+                else{
+                        alert("Your Email and Password Miss")
                 }
-                else if (email === '' && password === newData.password) {
-                        console.log('fillemail')
-                }
-                else if (email === '' && password === '') {
-                        console.log('fillemailandpassword')
-                }
+              
+        }
                 return (
 
                         <div className="login">
@@ -64,7 +64,7 @@ const Screen = () => {
 
                 )
         }
-}
+
         export default Screen
 
 
