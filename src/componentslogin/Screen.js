@@ -1,25 +1,30 @@
 import React, { useState } from "react";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import { Message } from "@mui/icons-material";
+import {Button} from "@mui/material";
+import "./Login.css"
 
 
 
 
-
-const Screen = () => {
+const Screen = (props) => {
 
         const [email, setemail] = useState('')
         const [password, setpassword] = useState('')
+       
+       const onClick=()=>{
+               console.log("login")
+       }
         const handleChange = (e) => {
                 e.preventDefault();
-                let data= localStorage.getItem("data");
-                let newData = JSON.parse(data);
-                console.log(newData.firstname)
-                console.log(newData.secondname)
-                console.log(newData.mailid)
-                console.log(newData.password)
-                if (email=== newData.mailid && password=== newData.password) {
+                let datas= localStorage.getItem("data");
+                let newData = JSON.parse(datas);
+                console.log("hai",newData)
+                console.log(newData.Fnmae)
+                console.log(newData.Sname)
+                console.log(newData.Email)
+                console.log(newData.Npsw)
+                if (email===newData.Email && password===newData.Cpsw) {
                       console.log('sucsses')
                       alert("your login succes..Enjoy your Browser")
                 }
@@ -27,6 +32,11 @@ const Screen = () => {
                         alert("Your Email and Password Miss")
                 }
               
+        }
+        const signinClick=(e)=>{
+                e.preventDefault()
+                props.pass(true)
+
         }
                 return (
 
@@ -48,15 +58,16 @@ const Screen = () => {
                                                                         <input type={'password'} value={password} onChange={e => setpassword(e.target.value)} placeholder="Enater the password" />
                                                                 </Grid>
                                                                 <Grid item={6}>
-                                                                        <button type={'button'} onClick={handleChange}>Login</button>
-
+                                                                        {/* <button  onClick={handleChange}>Login</button> */}
+                                                                        <Button type={'button'} variant="contained" onClick={handleChange}>Login</Button>
+                                                                        <Grid><Button  onClick={signinClick}>Sign In</Button></Grid>
                                                                 </Grid>
 
                                                         </Grid>
 
                                                 </Grid>
                                                 <Grid item xs={3}>
-
+                                              
                                                 </Grid>
                                         </Grid>
                                 </Box>

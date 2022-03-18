@@ -1,7 +1,6 @@
 import React from "react";
-import Register from './componentslogin/Register';
-import Screen from './componentslogin/Screen';
-import Functionlife from './ComponentLifecycle/Functionlife'
+import { Router } from "react-router";
+
 
 const App = () => {
     // const[row,setData]=useState([])
@@ -14,9 +13,10 @@ return (
         {/* <h1>Basic Table</h1> */}
         {/* {row &&<BasicTable data={row}/>} */}
         
-        <Register/>   
-        {/* <Functionlife/> */}
-    </div>
+        {/* <Register/>    */}
+       {/* <Parentchild/> */}
+       <Router/>
+        </div>
 )
 }
 
