@@ -2,29 +2,26 @@ import React, { useState } from "react";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import {Button} from "@mui/material";
+import { Link } from "react-router-dom";
+import Register from "../Register/Register";
 import "./Login.css"
-
-
-
-
 const Screen = (props) => {
 
         const [email, setemail] = useState('')
         const [password, setpassword] = useState('')
        
-       const onClick=()=>{
-               console.log("login")
-       }
+       
         const handleChange = (e) => {
                 e.preventDefault();
-                let datas= localStorage.getItem("data");
-                let newData = JSON.parse(datas);
-                console.log("hai",newData)
-                console.log(newData.Fnmae)
-                console.log(newData.Sname)
-                console.log(newData.Email)
-                console.log(newData.Npsw)
-                if (email===newData.Email && password===newData.Cpsw) {
+                let Data = localStorage.getItem("data")
+                let newDatas = JSON.parse(Data);
+                console.log("NEW OK==>",newDatas)
+                console.log(email,password)
+                let newData = newDatas.find((item)=>item.Email===email && item.Cpsw===password)
+                
+                 console.log(newData)
+                
+                if (newData) {
                       console.log('sucsses')
                       alert("your login succes..Enjoy your Browser")
                 }
@@ -35,7 +32,7 @@ const Screen = (props) => {
         }
         const signinClick=(e)=>{
                 e.preventDefault()
-                props.pass(true)
+             
 
         }
                 return (
@@ -58,11 +55,10 @@ const Screen = (props) => {
                                                                         <input type={'password'} value={password} onChange={e => setpassword(e.target.value)} placeholder="Enater the password" />
                                                                 </Grid>
                                                                 <Grid item={6}>
-                                                                        {/* <button  onClick={handleChange}>Login</button> */}
-                                                                        <Button type={'button'} variant="contained" onClick={handleChange}>Login</Button>
-                                                                        <Grid><Button  onClick={signinClick}>Sign In</Button></Grid>
+                                                                        <Grid><Button  onClick={signinClick}><Link to="/Register">Sign In</Link></Button></Grid>
+                                                                        <Grid><Button  onClick={handleChange}>Login</Button></Grid>
                                                                 </Grid>
-
+                                                                
                                                         </Grid>
 
                                                 </Grid>
