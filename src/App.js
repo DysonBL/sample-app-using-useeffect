@@ -6,8 +6,8 @@ import Home  from "./ComponentRouter/Home/Home";
 import About from "./ComponentRouter/About/About";
 import User from "./ComponentRouter/User/User";
 import Register from "./componentslogin/Register/Register";
-import Screen from "./componentslogin/Login/Screen";
-
+import Login from "./componentslogin/Login/Login";
+import Media from "./Media/Media";
 
 const App = () => {
     // const[row,setData]=useState([])
@@ -19,12 +19,16 @@ const App = () => {
        <>
        <BrowserRouter>
      <Routes>
-         <Route path="/Register" element={<Register/>}/>
-         <Route path="/Screen" element={<Screen/>}/>
-         <Route path="/Routerss" element={<Routerss/>}/>
+
+
+         <Route path="/Media" element={<Media/>}/>
+         {/* <Route path="/Register" element={<Register/>}/>
+         <Route path="/Login" element={<Login/>}/> */}
+
+         {/* <Route path="/Routerss" element={<Routerss/>}/>
          <Route path="/Home" element={<Home/>}/>
          <Route path="/About" element={<About/>}/>
-         <Route path="/User" element={<User/>}/>
+         <Route path="/User" element={<User/>}/> */}
          
          
          </Routes>  

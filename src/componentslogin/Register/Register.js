@@ -1,9 +1,9 @@
-import { TextField, FormControlLabel, Checkbox, Button, Grid } from "@mui/material";
+import { TextField, FormControlLabel, Checkbox, Button, Grid ,Paper} from "@mui/material";
 import Box from '@mui/material/Box';
-import Screen from "../Login/Screen";
 import React, { useState } from "react";
 import './Sign.css'
 import { Link } from "react-router-dom";
+import Login from "../Login/Login";
 
 const Register = () => {
     const [data, setdata] = useState({
@@ -33,41 +33,36 @@ const Register = () => {
     }
     return (
         <>
-            <div className="Sign"><h1>Sign In</h1>
-                <Box>
-                    <Grid container>
-                        <Grid item xs={12}>
-                            <Grid container>
-                                <Grid item xs={3}>
+            <h1>Sign In</h1>
+                <Box  container  >
+                    <Paper>
+                    <Grid container direction="column"  justifyContent="center"  alignItems="center"className="Sign" >
+                         
+                        <Grid  xs={2}></Grid>
+                            <Grid item xs={8}>
+                                <Grid>
+                                    <TextField label="First Name" value={data.Fname} onChange={handleChange} name="Fname" />
+                                    <TextField label="Second Name" value={data.Sname} onChange={handleChange} name="Sname" />
+                            
+                                <Grid gridAutoRows={4} >
+                                    <TextField fullWidth label="Email Id" value={data.Email} onChange={handleChange} name="Email" />
                                 </Grid>
-                                <Grid item xs={6}>
-                                    <div>
-                                        <TextField label="First Name" value={data.Fname} onChange={handleChange} name="Fname" />
-                                        <TextField label="Second Name" value={data.Sname} onChange={handleChange} name="Sname" />
-                                    </div>
-
-                                    <div>
-                                        <TextField fullWidth label="Email Id" value={data.Email} onChange={handleChange} name="Email" id="fullWidth" sx={{ width: 470, }} />
-                                    </div>
-                                    <div>
-                                        <TextField label="New Password" value={data.Npsw} onChange={handleChange} name="Npsw" />
-                                        <TextField label="Conform Password" value={data.Cpsw} onChange={handleChange} name="Cpsw" />
-                                    </div>
-                                    <div>
-                                        <FormControlLabel control={<Checkbox defaultChecked />} label="I accept the Terms of Use" />
-                                    </div>
-                                    <div>
-                                        <Button variant="contained" onClick={handleSubmit} >  <Link to="/Screen">SignIN </Link></Button>
-                                    </div>
+                                
+                                
+                                    <TextField label="New Password" type="password" value={data.Npsw} onChange={handleChange} name="Npsw" />
+                                    <TextField label="Conform Password" type="password" value={data.Cpsw} onChange={handleChange} name="Cpsw" />
                                 </Grid>
-                                <Grid item xs={3}>
-
-                                </Grid>
+                                
+                                    <FormControlLabel control={<Checkbox defaultChecked />} label="I accept the Terms of Use" />
+                               
+                                    <Button variant="contained" onClick={handleSubmit} >  <Link to="/Login">SignIN </Link></Button>
+                               
                             </Grid>
+                            <Grid item xs={2}></Grid>
                         </Grid>
-                    </Grid>
-                </Box>
-            </div>
+                        </Paper>
+                    </Box>
+
         </>
     )
 }

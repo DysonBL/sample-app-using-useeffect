@@ -1,8 +1,8 @@
 .Sign{
-    background-color: rgb(245, 219, 238);
-    margin-left:15%;
-    margin-right:15%;
-    padding-bottom:100px;
+    background-color: rgb(252, 246, 250);
+    
     text-align: center; 
   }
-  
+  h1{
+    text-align: center;
+  }

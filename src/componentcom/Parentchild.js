@@ -1,4 +1,4 @@
-import react from "react"
+import React from "react"
 import { useState } from "react";
 import { Button } from "@mui/material";
 import Child from "./Child";
