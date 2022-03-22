@@ -1,0 +1,91 @@
+/*default*/
+    .hedder{
+        padding: 10px;
+        text-align: center;
+        outline-style: groove;
+    }
+    .nav{
+        padding:10px;
+        padding-right:20px;
+        color: #f2f2f2;
+        text-align:left;
+        
+         }
+    .par{
+        display: flex;
+        list-style: none;
+      justify-content: space-around;
+      outline-style: groove;
+    }
+    .left{
+        padding:20px;
+        height:300px;
+        text-align: center;
+        outline-style: groove;
+            float: left;
+             width:30%;
+        
+          }
+    .main{
+        background-image: url("/home/pc/Pictures/3.jpeg");
+        image-orientation: flip;
+        height:310px;
+            float:center;
+            width: 60%;
+            padding:15px;
+            outline-style: groove;
+          }        
+    
+    .right{
+        padding:20px;
+        height:310px;
+        outline-style: groove;
+        text-align:center;
+            float:right;
+            width:30%;
+            padding:15px;
+            margin-top:-0px;
+          }
+          
+    .fooder{
+        padding:30px;
+        padding-right:30px;
+        padding-bottom:4px;
+    }
+    /* smart phone ,iphone size*/
+    @media(max-width:480px){
+        .hedder{background: rgb(241, 102, 102);}
+        .fooder{background-color:rgb(241, 138, 138);}
+        .left{background-color: rgb(238, 102, 129);}
+        .right{background-color: rgb(248, 124, 149);}
+        .nav{background-color: rgb(241, 155, 123);}
+        .main{background-image: url("/home/pc/Pictures/3.jpeg");}
+      }
+      /*Landcapetab*/
+      @media(min-width:480px){
+        .hedder{background: rgb(250, 235, 97);}
+        .fooder{background-color:rgb(241, 243, 125);}
+        .left{background-color: rgb(252, 249, 104);}
+        .right{background-color: rgb(237, 248, 85);}
+        .nav{background-color: rgb(226, 247, 38);}
+        .main{background-image: url("/home/pc/Pictures/2.jpeg");}
+      }
+      /*laptop,desktop*/
+      @media(min-width:900px) {
+        .hedder{background: rgb(109, 122, 238);}
+        .fooder{background-color:rgb(132, 130, 240);}
+        .left{background-color: rgb(139, 167, 245);}
+        .right{background-color: rgb(122, 162, 236);}
+        .nav{background-color: rgb(146, 155, 231);}
+        .main{background-image: url("/home/pc/Pictures/3.jpeg");}
+      }
+      /*desktop*/
+      @media(min-width:1080px) {
+        .hedder{background: rgb(74, 245, 74);}
+        .fooder{background-color:rgb(142, 247, 94);}
+        .left{background-color: rgb(92, 241, 87);}
+        .right{background-color: rgb(64, 235, 87);}
+        .nav{background-color: rgb(109, 245, 68);}
+        .main{background-image: url("/home/pc/Pictures/2.jpeg");}
+      }
+      

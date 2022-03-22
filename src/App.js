@@ -1,14 +1,14 @@
 import React from "react";
 import { Route, Router, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
-import Routerss from "./ComponentRouter/Router/Routerss";
-import Home  from "./ComponentRouter/Home/Home";
-import About from "./ComponentRouter/About/About";
-import User from "./ComponentRouter/User/User";
-import Register from "./componentslogin/Register/Register";
+// import Routerss from "./ComponentRouter/Router/Routerss";
+// import Home  from "./ComponentRouter/Home/Home";
+// import About from "./ComponentRouter/About/About";
+// import User from "./ComponentRouter/User/User";
+// import Register from "./componentslogin/Register/Register";
 import Login from "./componentslogin/Login/Login";
-import Media from "./Media/Media";
-
+import Medias from "./componentMedia/Medias";
+import Portals from "./Componentsportal/Portals";
 const App = () => {
     // const[row,setData]=useState([])
     // useEffect(()=>{
@@ -20,8 +20,8 @@ const App = () => {
        <BrowserRouter>
      <Routes>
 
-
-         <Route path="/Media" element={<Media/>}/>
+         <Route path="/Portals" element={<Portals/>}/>
+         <Route path="/Medias" element={<Medias/>}/>
          {/* <Route path="/Register" element={<Register/>}/>
          <Route path="/Login" element={<Login/>}/> */}
 
