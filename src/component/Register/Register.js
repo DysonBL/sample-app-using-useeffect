@@ -3,8 +3,6 @@ import Box from '@mui/material/Box';
 import React, { useState } from "react";
 import './Sign.css'
 import { Link } from "react-router-dom";
-import Login from "../Login/Login";
-
 const Register = () => {
     const [data, setdata] = useState({
         Fname: "",

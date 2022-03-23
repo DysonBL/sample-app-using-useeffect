@@ -1,5 +1,5 @@
 import React from "react"
-import "../componentMedia/media.css"
+import "./media.css"
 const Medias=()=>{
     return(
         <>

@@ -1,7 +1,7 @@
 import { Button, Modal } from "@mui/material";
 import React, { useState } from "react";
-import   ReactDOM from "react-dom";
-import "../Componentsportal/Portal.css";
+import  ReactDOM from "react-dom";
+import "./Portal.css"
 
 const Modals=({ message, isOpen, onClose})=> {
         if (!isOpen){
