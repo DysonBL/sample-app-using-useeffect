@@ -3,8 +3,10 @@ import Box from '@mui/material/Box';
 import React, { useState } from "react";
 import './Sign.css'
 import { Link } from "react-router-dom";
+
 const Register = () => {
     const [data, setdata] = useState({
+        id:Date.now(),
         Fname: "",
         Sname: "",
         Email: "",

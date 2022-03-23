@@ -1,0 +1,17 @@
+h2{
+    color: brown;
+    text-align: center;
+}
+table{
+    border:2px;
+    border-style: double;
+    background-color: rgb(218, 248, 248);
+}
+th{
+    color: black;
+    border-radius:2px;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+}

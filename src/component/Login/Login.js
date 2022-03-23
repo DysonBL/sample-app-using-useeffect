@@ -16,8 +16,7 @@ const Login= () => {
                 let Data = localStorage.getItem("data")
                 let newDatas = JSON.parse(Data);
                 let newData = newDatas.find((item) => item.Email===datas.email && item.Cpsw===datas.password)
-                console.log("1",datas.email,datas.password)
-                console.log("2",newData)
+
                 if (newData) {
                         alert("your succes..Enjoy your Browser")
                 }
@@ -46,7 +45,7 @@ const Login= () => {
                                                         <Grid item={6} columnSpacing={4}>
                                                          <Button variant="outLine" ><Link to="/Register">Sign In</Link></Button></Grid>
                                                         
-                                                         <Button variant="contained" onClick={handleSubmit}>Login</Button></Grid>
+                                                         <Button variant="contained" onClick={handleSubmit}><Link to="/Window">Login</Link></Button></Grid>
                                                         </Grid>
                                                 </Grid>
                                                 <Grid item xs={2}></Grid>

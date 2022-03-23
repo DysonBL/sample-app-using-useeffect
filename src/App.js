@@ -3,6 +3,7 @@ import { Route, Router, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import Login from "./component/Login/Login"
 import Register from "./component/Register/Register"
+import Window from "./component/Login/Window";
 import Portals from "./component/Portal/Portals"
 import Medias from "./component/Media/Medias";
 const App = () => {
@@ -16,11 +17,12 @@ const App = () => {
        <BrowserRouter>
      <Routes>
 
-         <Route path="/Portals" element={<Portals/>}/>
-         <Route path="/Medias" element={<Medias/>}/>
+       
          <Route path="/Register" element={<Register/>}/>
          <Route path="/Login" element={<Login/>}/> 
-
+         <Route path="/Window" element={<Window/>}/>
+         {/* <Route path="/Portals" element={<Portals/>}/>
+         <Route path="/Medias" element={<Medias/>}/> */}
          {/* <Route path="/Routerss" element={<Routerss/>}/>
          <Route path="/Home" element={<Home/>}/>
          <Route path="/About" element={<About/>}/>
