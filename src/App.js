@@ -6,6 +6,8 @@ import Register from "./component/Register/Register"
 import Window from "./component/Login/Window";
 import Portals from "./component/Portal/Portals"
 import Medias from "./component/Media/Medias";
+import Models from "./component/Login/Models";
+import Pop from "./component/Login/Pop";
 const App = () => {
     // const[row,setData]=useState([])
     // useEffect(()=>{
@@ -17,10 +19,12 @@ const App = () => {
        <BrowserRouter>
      <Routes>
 
-       
+         <Route path="/Pop" element={<Pop/>}/>
+
          <Route path="/Register" element={<Register/>}/>
          <Route path="/Login" element={<Login/>}/> 
          <Route path="/Window" element={<Window/>}/>
+
          {/* <Route path="/Portals" element={<Portals/>}/>
          <Route path="/Medias" element={<Medias/>}/> */}
          {/* <Route path="/Routerss" element={<Routerss/>}/>
