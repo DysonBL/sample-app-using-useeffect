@@ -1,18 +1,53 @@
-h2{
-    color: brown;
-    text-align: center;
-}
-table{
-    border:2px;
-    border-style: double;
-    background-color: rgb(218, 248, 248);
-}
-th{
-    color: black;
-    border-radius:2px;
-}
-@media(max-width:800px){
-    .paper{
-        border-radius:2px;
+
+@media(min-width:800px){
+    h2{
+        color: rgb(54, 16, 223);
+        text-align: center;
+        font-size: large;
+        font-style: italic;
     }
+    table{
+        border:2px;
+        border-style: double;
+        background-color: rgb(147, 252, 121);
+        font-style: italic;
+        range: infinite;
+    }
+    th{
+        color: rgb(7, 4, 4);
+        border-radius:5px;
+        font-variant: small-caps;
+        font-size: x-large;
+        text-decoration: underline;
+    }
+    .head{
+        background-color: aqua;
+    }
+    .footer{
+        background-color: rgb(108, 236, 236);
+    }
+  
+}
+
+@media(max-width:800px){
+    h2{
+        color: rgb(113, 66, 243);
+        text-align: center;
+        font-size: large;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+    }
+    table{
+        border:3px;
+        border-style:double;
+        background-color: rgb(245, 159, 241);
+        column-gap: 2px;
+        }
+    th{
+        color: rgb(7, 4, 4);
+        border-radius:5px;
+        text-shadow: 5px;
+
+    }
+  
 }
