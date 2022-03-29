@@ -1,0 +1,16 @@
+h2{
+    color: blue;
+    text-align: center;
+}
+nav{
+    background-color: aquamarine;
+    
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .body{
+      background-color: rgb(212, 250, 250);
+  }

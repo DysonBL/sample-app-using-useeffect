@@ -19,8 +19,8 @@ const Reducer = (state, action) => {
             
         case "edit":
             console.log(state,"state")
-             let index=state.findIndex(user=>user.id ===action.payload.id)
-             state.splice(index,1,action.payload)  
+            let index=state.findIndex(user=>user.id ===action.payload.id)
+            state.splice(index,1,action.payload)  
               
           return state 
 

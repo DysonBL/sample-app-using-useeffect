@@ -8,8 +8,9 @@ import Portals from "./component/Portal/Portals"
 import Medias from "./component/Media/Medias";
 import Models from "./component/Login/Models";
 import Pop from "./component/Login/Pop";
+import Api from "./component/Apicrud/Api";
+
 const App = () => {
-    // const[row,setData]=useState([])
     // useEffect(()=>{
     //     fetch("https://jsonplaceholder.typicode.com/todos").then((res)=>res.json().then((res)=>setData(res)))
     // },[])
@@ -18,7 +19,7 @@ const App = () => {
        <>
        <BrowserRouter>
      <Routes>
-
+         <Route path="/Api" element={<Api/>}/>
          <Route path="/Pop" element={<Pop/>}/>
 
          <Route path="/Register" element={<Register/>}/>
