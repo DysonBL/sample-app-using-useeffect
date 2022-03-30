@@ -9,6 +9,8 @@ import Medias from "./component/Media/Medias";
 import Models from "./component/Login/Models";
 import Pop from "./component/Login/Pop";
 import Api from "./component/Apicrud/Api";
+import Post from "./component/Apicrud/Post";
+import EditPop from "./component/Apicrud/Editpop";
 
 const App = () => {
     // useEffect(()=>{
@@ -19,9 +21,12 @@ const App = () => {
        <>
        <BrowserRouter>
      <Routes>
+          
+         <Route path="/EditPop" element={<EditPop/>}/>
          <Route path="/Api" element={<Api/>}/>
-         <Route path="/Pop" element={<Pop/>}/>
+         <Route path="/Post" element={<Post/>}/>
 
+         <Route path="/Pop" element={<Pop/>}/>
          <Route path="/Register" element={<Register/>}/>
          <Route path="/Login" element={<Login/>}/> 
          <Route path="/Window" element={<Window/>}/>
