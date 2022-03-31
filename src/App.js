@@ -11,6 +11,7 @@ import Pop from "./component/Login/Pop";
 import Api from "./component/Apicrud/Api";
 import Post from "./component/Apicrud/Post";
 import EditPop from "./component/Apicrud/Editpop";
+import Tost from "./component/Apicrud/Tost";
 
 const App = () => {
     // useEffect(()=>{
@@ -25,6 +26,7 @@ const App = () => {
          <Route path="/EditPop" element={<EditPop/>}/>
          <Route path="/Api" element={<Api/>}/>
          <Route path="/Post" element={<Post/>}/>
+         <Route path="/Tost" element={<Tost/>}/>
 
          <Route path="/Pop" element={<Pop/>}/>
          <Route path="/Register" element={<Register/>}/>

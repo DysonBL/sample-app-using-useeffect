@@ -86,7 +86,6 @@ const Window = () => {
                                     <td>{newDatas.Email}</td>
                                     <td><Button className={"del"}  onClick={() => handleDel(newDatas)}> DEL</Button></td>
                                     <td><Button className={"edit"} onClick={() => handleEdit(newDatas)}>EDIT</Button></td>
-                                   
                                     </tr>
                                 </>)
                                 })}
