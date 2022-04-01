@@ -10,6 +10,9 @@ import Models from "./component/Login/Models";
 import Pop from "./component/Login/Pop";
 import Api from "./component/Apicrud/Api";
 import Post from "./component/Apicrud/Post";
+import Dynamic from "./component/Routing/Dynamic";
+import Edit from "./component/Routing/Edit";
+
 import EditPop from "./component/Apicrud/Editpop";
 import Tost from "./component/Apicrud/Tost";
 
@@ -23,10 +26,13 @@ const App = () => {
        <BrowserRouter>
      <Routes>
           
-         <Route path="/EditPop" element={<EditPop/>}/>
+         <Route path="/Dynamic" element={<Dynamic/>}/>
+         <Route path="/Edit/:id" element={<Edit/>}/>
+
          <Route path="/Api" element={<Api/>}/>
          <Route path="/Post" element={<Post/>}/>
-         <Route path="/Tost" element={<Tost/>}/>
+         <Route path="/Tost" element={<Tost/>}/> 
+         <Route path="/EditPop" element={<EditPop/>}/> 
 
          <Route path="/Pop" element={<Pop/>}/>
          <Route path="/Register" element={<Register/>}/>

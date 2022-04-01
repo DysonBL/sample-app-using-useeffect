@@ -7,7 +7,7 @@ import axios from "axios";
 import EditPop from "./Editpop";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { useNavigate } from "react-router";
 
 
 
@@ -35,10 +35,11 @@ const Reducer = (state, action) => {
 
 const Api = () => {
     const [state, dispatch] = useReducer(Reducer, [])
+    let navigate=useNavigate()
     const [showToast, setShowToast] = useState(true);
-    const [show, setShow] = useState(false);    //Edit Popup
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    // const [show, setShow] = useState(false);    //Edit Popup
+    // const handleClose = () => setShow(false);
+    // const handleShow = () => setShow(true);
     const [Update, setUpdate] = useState([])
     const [Edit, setEdit] = useState([])
     const [Error,setError]=useState([])
@@ -75,8 +76,9 @@ const Api = () => {
             })
     }
     const EditUser = (res) => {
-        handleShow()
+        // handleShow()
         setUpdate(res)
+        navigate(`/Edit/${res}`)
         console.log("edit", res)
     }
 
@@ -103,7 +105,7 @@ const Api = () => {
                 toast.error("Your EDIT calling user API not Found..!!!")
                 console.log(error, "error");
             })
-        setShow(false)
+        // setShow(false)
     }
     const User = (data) => {
         handleSave(data)
@@ -137,7 +139,7 @@ const Api = () => {
                                         <td>{res.Age}</td>
                                         <td>{res.Gender}</td>
                                         <td><Button className={"del"}  variant="danger"onClick={() => DelUser(res.id)}> DEL</Button></td>
-                                        <td><Button className={"edit"}  variant="danger" onClick={() => EditUser(res)}>EDIT</Button></td>
+                                        <td><Button className={"edit"}  variant="danger" onClick={() => EditUser(res.id)}>EDIT</Button></td>
 
                                     </tr>
                                     </>)
@@ -146,7 +148,7 @@ const Api = () => {
 
                     </Table>
                 </Paper>
-                <EditPop open={show} close={handleSave} userdata={User} change={Update} />
+                <EditPop /*open={show}*/close={handleSave} userdata={User} change={Update} />
             </div>
         </>
     )
