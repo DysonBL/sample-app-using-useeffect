@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Router, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import Login from "./component/Login/Login"
 import Register from "./component/Register/Register"
@@ -12,9 +12,14 @@ import Api from "./component/Apicrud/Api";
 import Post from "./component/Apicrud/Post";
 import Dynamic from "./component/Routing/Dynamic";
 import Edit from "./component/Routing/Edit";
-
 import EditPop from "./component/Apicrud/Editpop";
 import Tost from "./component/Apicrud/Tost";
+import Hocs from "./component/HOC/Hocs";
+import Employelist from "./component/HOC/Employelist";
+import Companylist from "./component/HOC/Compaylist";
+
+// const Employee=Hocs(Employelist)
+// const Company=Hocs(Companylist)
 
 const App = () => {
     // useEffect(()=>{
@@ -26,6 +31,9 @@ const App = () => {
        <BrowserRouter>
      <Routes>
           
+         <Route path="/Employelist" element={<Employelist/>}/>
+         <Route path="/Companylist" element={<Companylist/>}/>
+
          <Route path="/Dynamic" element={<Dynamic/>}/>
          <Route path="/Edit/:id" element={<Edit/>}/>
 
@@ -45,8 +53,6 @@ const App = () => {
          <Route path="/Home" element={<Home/>}/>
          <Route path="/About" element={<About/>}/>
          <Route path="/User" element={<User/>}/> */}
-         
-         
          </Routes>  
        </BrowserRouter>
      

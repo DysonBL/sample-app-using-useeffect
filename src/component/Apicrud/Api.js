@@ -50,8 +50,8 @@ const Api = () => {
         }
     }, [state])
 
-    useEffect(() => {
-        axios.get("http://localhost:3006/Users")
+    useEffect( async() => {
+        await axios.get("http://localhost:3006/Users")
             .then((res) => {
                 setError("")
                 console.log(res, "Get")
