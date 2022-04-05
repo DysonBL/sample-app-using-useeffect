@@ -14,22 +14,20 @@ import Dynamic from "./component/Routing/Dynamic";
 import Edit from "./component/Routing/Edit";
 import EditPop from "./component/Apicrud/Editpop";
 import Tost from "./component/Apicrud/Tost";
-import Hocs from "./component/HOC/Hocs";
 import Employelist from "./component/HOC/Employelist";
 import Companylist from "./component/HOC/Compaylist";
+import Index from "./component/Redux/Index";
 
 // const Employee=Hocs(Employelist)
 // const Company=Hocs(Companylist)
 
 const App = () => {
-    // useEffect(()=>{
-    //     fetch("https://jsonplaceholder.typicode.com/todos").then((res)=>res.json().then((res)=>setData(res)))
-    // },[])
-    // console.log("login")
+    
   return (
        <>
        <BrowserRouter>
      <Routes>
+         <Route path="/Index" element={<Index/>}/>
           
          <Route path="/Employelist" element={<Employelist/>}/>
          <Route path="/Companylist" element={<Companylist/>}/>
