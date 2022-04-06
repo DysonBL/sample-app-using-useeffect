@@ -16,7 +16,8 @@ import EditPop from "./component/Apicrud/Editpop";
 import Tost from "./component/Apicrud/Tost";
 import Employelist from "./component/HOC/Employelist";
 import Companylist from "./component/HOC/Compaylist";
-import Index from "./component/Redux/Index";
+import Uiscreen from "./component/Redux/Uiscreen";
+import ProductDetail from "./component/Redux/ProductDetail";
 
 // const Employee=Hocs(Employelist)
 // const Company=Hocs(Companylist)
@@ -27,26 +28,28 @@ const App = () => {
        <>
        <BrowserRouter>
      <Routes>
-         <Route path="/Index" element={<Index/>}/>
-          
-         <Route path="/Employelist" element={<Employelist/>}/>
-         <Route path="/Companylist" element={<Companylist/>}/>
+         <Route path="/Uiscreen" element={<Uiscreen/>}/>
+         <Route path="/ProductDetail" element={<ProductDetail/>}/>
 
-         <Route path="/Dynamic" element={<Dynamic/>}/>
-         <Route path="/Edit/:id" element={<Edit/>}/>
+         {/* <Route path="/Employelist" element={<Employelist/>}/>
+         <Route path="/Companylist" element={<Companylist/>}/> */}
 
-         <Route path="/Api" element={<Api/>}/>
+         {/* <Route path="/Dynamic" element={<Dynamic/>}/>
+         <Route path="/Edit/:id" element={<Edit/>}/> */}
+
+         {/* <Route path="/Api" element={<Api/>}/>
          <Route path="/Post" element={<Post/>}/>
          <Route path="/Tost" element={<Tost/>}/> 
-         <Route path="/EditPop" element={<EditPop/>}/> 
+         <Route path="/EditPop" element={<EditPop/>}/>  */}
 
-         <Route path="/Pop" element={<Pop/>}/>
+         {/* <Route path="/Pop" element={<Pop/>}/>
          <Route path="/Register" element={<Register/>}/>
          <Route path="/Login" element={<Login/>}/> 
-         <Route path="/Window" element={<Window/>}/>
+         <Route path="/Window" element={<Window/>}/> */}
 
-         <Route path="/Portals" element={<Portals/>}/>
-         <Route path="/Medias" element={<Medias/>}/>
+         {/* <Route path="/Portals" element={<Portals/>}/>
+         <Route path="/Medias" element={<Medias/>}/> */}
+
          {/* <Route path="/Routerss" element={<Routerss/>}/>
          <Route path="/Home" element={<Home/>}/>
          <Route path="/About" element={<About/>}/>

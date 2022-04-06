@@ -1,10 +1,28 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./Index.css";
 import { Button } from "react-bootstrap";
 import { Card } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+import {setProducts} from '../Redux/Action/Action'
 
+const Uiscreen = () => {
+    const Product =useSelector((state)=>state.allproducts.Product);
+    const dispatch= useDispatch();
 
-const Index = () => {
+    const setsProducts= async()=>{
+        const response= await axios
+        .get("http://localhost:3006/product")
+        .catch((error)=>{
+            console.log(error,"error")
+        })
+       dispatch(setProducts(response.data))
+        console.log(response.data,"Api====>")
+    }
+    useEffect(()=>{
+        setsProducts();
+      },[]);
+   console.log("PRODUCT",Product)
     return (
         <>
             <nav className="navbar navbar-dark bg-primary">
@@ -30,7 +48,7 @@ const Index = () => {
                                     <Card.Body>
                                         <Card.Title>Dairy Milk</Card.Title>
                                         <Card.Text>
-                                            card's content.
+                                            Price:35
                                         </Card.Text>
                                         <div className="d-flex">
                                             <Button style={{ margin: "2px" }} variant="primary">Edit</Button>
@@ -64,4 +82,4 @@ const Index = () => {
         </>
     )
 }
-export default Index;
+export default Uiscreen;
