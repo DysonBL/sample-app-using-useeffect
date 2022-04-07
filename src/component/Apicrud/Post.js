@@ -16,7 +16,8 @@ const Post = (props) => {
     const handleChange = (e) => {
         setdata({ ...data, [e.target.name]: e.target.value })
         console.log(data)
-    }     
+    }  
+       
     const PostCreat=()=>{
         axios.post("http://localhost:3006/Users",data)
         .then((res)=>{

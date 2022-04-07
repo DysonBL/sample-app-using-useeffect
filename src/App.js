@@ -17,7 +17,7 @@ import Tost from "./component/Apicrud/Tost";
 import Employelist from "./component/HOC/Employelist";
 import Companylist from "./component/HOC/Compaylist";
 import Uiscreen from "./component/Redux/Uiscreen";
-import ProductDetail from "./component/Redux/ProductDetail";
+import PostButton from "./component/Redux/Compont/PostButton";
 
 // const Employee=Hocs(Employelist)
 // const Company=Hocs(Companylist)
@@ -29,13 +29,13 @@ const App = () => {
        <BrowserRouter>
      <Routes>
          <Route path="/Uiscreen" element={<Uiscreen/>}/>
-         <Route path="/ProductDetail" element={<ProductDetail/>}/>
+         <Route path="/PostButton" element={<PostButton/>}/>
 
          {/* <Route path="/Employelist" element={<Employelist/>}/>
          <Route path="/Companylist" element={<Companylist/>}/> */}
 
-         {/* <Route path="/Dynamic" element={<Dynamic/>}/>
-         <Route path="/Edit/:id" element={<Edit/>}/> */}
+         <Route path="/Dynamic" element={<Dynamic/>}/>
+         <Route path="/Edit/:id" element={<Edit/>}/>
 
          {/* <Route path="/Api" element={<Api/>}/>
          <Route path="/Post" element={<Post/>}/>
