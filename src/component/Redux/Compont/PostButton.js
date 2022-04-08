@@ -10,7 +10,6 @@ const PostButton = () => {
     let navigate = useNavigate()
     const dispatch = useDispatch();
     const [datas, setdatas] = useState({
-        Id: Date.now(),
         Name: "",
         Price: "",
         url: ""
@@ -28,7 +27,7 @@ const PostButton = () => {
 
     return (
         <>
-            <h1>Create User</h1>
+            <h1>PostT Prodects</h1>
             <Box container >
                 <Paper>
                     <Grid container direction="column" justifyContent="center" alignItems="center" className="Sign" >

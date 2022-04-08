@@ -18,6 +18,7 @@ import Employelist from "./component/HOC/Employelist";
 import Companylist from "./component/HOC/Compaylist";
 import Uiscreen from "./component/Redux/Uiscreen";
 import PostButton from "./component/Redux/Compont/PostButton";
+import EditButton from "./component/Redux/Compont/EditButton";
 
 // const Employee=Hocs(Employelist)
 // const Company=Hocs(Companylist)
@@ -30,7 +31,8 @@ const App = () => {
      <Routes>
          <Route path="/Uiscreen" element={<Uiscreen/>}/>
          <Route path="/PostButton" element={<PostButton/>}/>
-
+         <Route path="/EditButton/:Id" element={<EditButton/>}/>
+         
          {/* <Route path="/Employelist" element={<Employelist/>}/>
          <Route path="/Companylist" element={<Companylist/>}/> */}
 
