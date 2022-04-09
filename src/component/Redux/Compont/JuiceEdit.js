@@ -72,7 +72,7 @@ const JuiceEdit = () => {
                     <Card style={{ width: '48rem' }} className="bg-dark text-white">
                         <Card.Img src=" https://image.shutterstock.com/image-photo/fresh-juice-pours-fruit-vegetables-260nw-532002529.jpg" />
                         <Card.ImgOverlay>
-                            <Card.Title><h1>EDIT FRESH JUICE</h1></Card.Title>
+                            <Card.Title><h1>EDIT FRESH JUICE..</h1></Card.Title>
                             <Card.Text style={{ margin:'7rem' }} >
                                 <div> <TextField label="Name" value={Data.Name} onChange={handleChange} name="Name" /></div>
                                 <div> <TextField label="Price" value={Data.Price} onChange={handleChange} name="Price" />  </div>
