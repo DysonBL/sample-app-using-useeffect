@@ -1,9 +1,14 @@
 
 export const ActionType={
-
+    // sweets Prodcts
     GET_PRODUCTS:"GET_PRODUCTS",
     POST_PRODUCT:"POST_PRODECT",
     REMOVE_PRODUCT:"REMOVE_PRODUCT",
-    PUT_PRODUCT: "PUT_PRODUCT"
-
+    PUT_PRODUCT: "PUT_PRODUCT",
+     
+    // Juice Products
+    GET_JUICE:"GET_JUICE",
+    POST_JUICE:"POST_JUICE",
+    REMOVE_JUICE:"REMOVE_JUICE",
+    PUT_JUICE:"PUT_JUICE"
 };

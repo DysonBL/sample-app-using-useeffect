@@ -20,7 +20,6 @@ const PostButton = () => {
     }
     const PostCreat = (e) => {
         e.preventDefault()
-        console.log("==>post", datas)
         dispatch(POST_PRODUCT(datas))
         navigate("/Uiscreen/")
     }

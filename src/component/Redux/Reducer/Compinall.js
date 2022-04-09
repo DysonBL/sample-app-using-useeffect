@@ -1,10 +1,9 @@
 import { combineReducers } from "redux";
-import { PostReducer, ProductReducer, PutReducer, RemoveReducer } from "./ProductReducer";
+import { ProductReducer,JuiceReducer} from "./ProductReducer";
 
 const reducer = combineReducers({
     allproducts:ProductReducer,
-    postproduct:PostReducer,
-    deleteproduct:RemoveReducer,
-    editproduct:PutReducer
+    allJuice:JuiceReducer
+    
 })
 export default reducer;

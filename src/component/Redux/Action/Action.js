@@ -35,7 +35,7 @@ export const REMOVE_PRODUCT=(data)=>{
          .then((res)=>{
              console.log(res,"Remove")
              dispatch(GET_PRODUCTS())
-             //dispatch(removedProduct(data))
+             dispatch(removedProduct(data))
              
          })
          .catch((error)=>{

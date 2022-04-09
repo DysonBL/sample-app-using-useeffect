@@ -19,6 +19,8 @@ import Companylist from "./component/HOC/Compaylist";
 import Uiscreen from "./component/Redux/Uiscreen";
 import PostButton from "./component/Redux/Compont/PostButton";
 import EditButton from "./component/Redux/Compont/EditButton";
+import JuicePost from "./component/Redux/Compont/JuicePost";
+import JuiceEdit from "./component/Redux/Compont/JuiceEdit";
 
 // const Employee=Hocs(Employelist)
 // const Company=Hocs(Companylist)
@@ -29,9 +31,13 @@ const App = () => {
        <>
        <BrowserRouter>
      <Routes>
+         
          <Route path="/Uiscreen" element={<Uiscreen/>}/>
          <Route path="/PostButton" element={<PostButton/>}/>
          <Route path="/EditButton/:Id" element={<EditButton/>}/>
+         <Route path="/JuicePost" element={<JuicePost/>}/>
+         <Route path="/JuiceEdit/:Id" element={<JuiceEdit/>}/> 
+         
          
          {/* <Route path="/Employelist" element={<Employelist/>}/>
          <Route path="/Companylist" element={<Companylist/>}/> */}
