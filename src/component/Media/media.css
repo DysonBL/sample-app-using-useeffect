@@ -27,7 +27,7 @@
         
           }
     .main{
-        background-image: url("/home/pc/Pictures/3.jpeg");
+        /* background-image: url("/home/pc/Pictures/3.jpeg"); */
         image-orientation: flip;
         height:310px;
             float:center;
@@ -59,7 +59,7 @@
         .left{background-color: rgb(238, 102, 129);}
         .right{background-color: rgb(248, 124, 149);}
         .nav{background-color: rgb(241, 155, 123);}
-        .main{background-image: url("/home/pc/Pictures/3.jpeg");}
+        /* .main{background-image: url("/home/pc/Pictures/3.jpeg");} */
       }
       /*Landcapetab*/
       @media(min-width:480px){
@@ -68,7 +68,7 @@
         .left{background-color: rgb(252, 249, 104);}
         .right{background-color: rgb(237, 248, 85);}
         .nav{background-color: rgb(226, 247, 38);}
-        .main{background-image: url("/home/pc/Pictures/2.jpeg");}
+        /* .main{background-image: url("/home/pc/Pictures/2.jpeg");} */
       }
       /*laptop,desktop*/
       @media(min-width:900px) {
@@ -77,7 +77,7 @@
         .left{background-color: rgb(139, 167, 245);}
         .right{background-color: rgb(122, 162, 236);}
         .nav{background-color: rgb(146, 155, 231);}
-        .main{background-image: url("/home/pc/Pictures/3.jpeg");}
+        /* .main{background-image: url("/home/pc/Pictures/3.jpeg");} */
       }
       /*desktop*/
       @media(min-width:1080px) {
@@ -86,6 +86,6 @@
         .left{background-color: rgb(92, 241, 87);}
         .right{background-color: rgb(64, 235, 87);}
         .nav{background-color: rgb(109, 245, 68);}
-        .main{background-image: url("/home/pc/Pictures/2.jpeg");}
+        /* .main{background-image: url("/home/pc/Pictures/2.jpeg");} */
       }
       
